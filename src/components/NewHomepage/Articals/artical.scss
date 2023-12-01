@@ -1,30 +1,31 @@
 .artical_section {
     padding: 3rem 2rem 0;
     display: grid;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    .artical_card {
+    // gap: 4rem;
+    
+    .artical_cards {
         display: flex;
         flex-direction: row;
-        // border: 1px solid red;
+        gap: 1rem;
         .artical_image {
+            width: 100%;
+            height: 100%;
             transform: scale(0.9);
         }
 
         .artical_card_content {
             display: flex;
             flex-direction: column;
+            width: 100%;
             gap: 1rem;
-            padding-inline-start: 1.5rem;
+            padding-inline-start: 0.25rem;
             h2 {
                 color: hsl(233, 8%, 79%);
-                font-size: 45px;
+                font-size: 40px;
                 font-weight: 600;
             }
             h4 {
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 800;
                 
                 &:hover {
@@ -34,7 +35,7 @@
             }
             
             p {
-                font-size: 20px;
+                font-size: 18px;
                 color:  hsl(236, 13%, 42%);
                 font-weight: 500;
             }

@@ -7,8 +7,9 @@ const Artical = () => {
   
     return (
     <section className="artical_section">
+
         {articals.map((artical) => (
-            <div key={artical.id} className="artical_card">
+            <div key={artical.id} className="artical_cards">
 
                 <img src={artical.image} className="artical_image"/>
 

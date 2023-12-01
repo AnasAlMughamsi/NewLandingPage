@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <nav className='navbar'>
-            <img src={Logo} alt="logo" />
+            <img src={Logo} alt="logo" width={"100px"} height={"100px"}/>
             <div className="nav-item-container">
                 <div className={`${isMobile ? "" : "three-dashs-menu-mobile"}`} 
                 onClick={() => setIsMobile(!isMobile)}>
