@@ -1,0 +1,167 @@
+
+
+// - Soft orange: hsl(35, 77%, 62%)
+// - Soft red: hsl(5, 85%, 63%)
+
+// ### Neutral
+
+// Off-white: hsl(36, 100%, 99%)
+// Grayish blue: hsl(233, 8%, 79%)
+// Dark grayish blue: hsl(236, 13%, 42%)
+// Very dark blue: hsl(240, 100%, 5%)
+
+.hero_container {
+    // height: 65vh;
+    margin-block-start: 2.5rem;
+    display: grid;
+    gap: 2.5rem;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four';    
+
+    .hero_card:nth-child(1) {
+        grid-area: one;
+        img {
+            width: 100%
+        }
+        transition: all ease-in 0.25s;
+
+    }
+    .hero_card:nth-child(2) {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 0.9;
+        padding-inline: 1.75rem;
+        grid-area: two;
+        transition: all ease-in 0.25s;
+
+    }
+    .hero_card:nth-child(3) {
+        transition: all ease-in 0.25s;
+
+        grid-area: three;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline: 1rem;
+        color: hsl(236, 13%, 42%);
+        button {
+            margin-block-start: 1.75rem;
+            background-color: hsl(5, 85%, 63%);
+            padding: 1rem 2rem;
+            color: white;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+
+    }
+    .hero_card:nth-child(4) {
+        transition: all ease-in 0.25s;
+
+        grid-area: four;
+        background-color: hsl(240, 100%, 5%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2rem;
+        
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            color: hsl(35, 77%, 62%);
+        }
+
+        .single_news_card {
+            padding: 2rem 0;
+            color: white;
+            border-bottom: 1px solid gray;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            h4 {
+                font-size: 23px;
+                font-weight: 600;
+                &:hover {
+                    color: hsl(35, 77%, 62%);
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                margin-block-start: 0.75rem;
+                color: hsl(233, 8%, 79%);
+            }
+        }
+
+    }
+}
+
+// after 960px do that...
+
+
+@media (min-width: 960px) {
+    .hero_container {
+        grid-template-areas: 
+        'one one four'
+        'two three four';
+
+     
+        .hero_card:nth-child(1) {
+        }
+        
+        .hero_card:nth-child(2) {
+            line-height: 1;
+            padding-inline: 1.75rem;
+        }
+        
+        .hero_card:nth-child(3) {
+        }
+
+        .hero_card:nth-child(4) {
+       
+        }
+    }
+
+}
+
+
+@media (min-width: 2060px) {
+    .hero_container {
+        .hero_card:nth-child(2) {
+            font-size: 90px;
+            
+        }
+        .hero_card:nth-child(3) {
+            font-size: 20px;
+        }
+        .hero_card:nth-child(4) {
+            .single_news_card {
+                // padding: 2rem 0;
+                // color: white;
+                border-bottom: 1px solid gray;
+                &:last-child {
+                    border-bottom: none;
+                }
+                h4 {
+                    font-size: 32px;
+                }
+
+                p {
+                    font-size: 25px;
+                    margin-block-start: 0.75rem;
+                    color: hsl(233, 8%, 79%);
+                }
+            }
+        }
+    }
+}
